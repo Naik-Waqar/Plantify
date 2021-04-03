@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="@color/black"
+    tools:context=".AddPlantDetailsActivity">
+
+    <!--  header toolbar-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:onClick="go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_chevron"
+            android:layout_marginStart="8dp"
+            android:background="@null"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_centerInParent="true"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:text="Add Plant"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/plant_pic"
+        android:layout_below="@+id/header"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/plant_img"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_oval_white_with_stroke"
+            android:src="@drawable/ic_profile_watermark"/>
+
+        <ImageButton
+            android:id="@+id/btn_capture_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_oval_white_with_stroke"
+            android:src="@drawable/ic_camera"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/plant_pic"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="22dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/plant_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_light_green"
+                android:padding="14dp"
+                android:hint="Name this plant"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/plant_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_marginTop="6dp"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:focusable="false"
+                android:maxLines="3"
+                android:background="@drawable/bg_rounded_light_green"
+                android:hint="Short description"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/plant_family"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_rounded_light_green"
+                android:padding="14dp"
+                android:hint="Plant family"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_rounded_dark_green"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="Add Plant"/>
+
+
+
+</RelativeLayout>
